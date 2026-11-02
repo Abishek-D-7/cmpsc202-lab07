@@ -1,4 +1,4 @@
-# Lab 08: The Integer-Valued Knapsack Problem
+# Lab 07: The Integer-Valued Knapsack Problem
 
 **Name:** _______________________  
 
