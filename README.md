@@ -62,28 +62,8 @@ Consider the following simple example:
 
 I started with capacity 3 and made a branch for each item that fits. After choosing an item, I subtracted its weight and repeated the same steps. In `MaxValue(c) = v`, `c` is the space left and `v` is the best value for that space. I included repeated calls because the recursive algorithm calculates them each time.
 
-```text
-MaxValue(3) = 9
-├── item 1 (w=1, v=2) → MaxValue(2) = 6
-│   ├── item 1 (w=1, v=2) → MaxValue(1) = 3
-│   │   ├── item 1 (w=1, v=2) → MaxValue(0) = 0
-│   │   └── item 3 (w=1, v=3) → MaxValue(0) = 0
-│   ├── item 2 (w=2, v=5) → MaxValue(0) = 0
-│   └── item 3 (w=1, v=3) → MaxValue(1) = 3
-│       ├── item 1 (w=1, v=2) → MaxValue(0) = 0
-│       └── item 3 (w=1, v=3) → MaxValue(0) = 0
-├── item 2 (w=2, v=5) → MaxValue(1) = 3
-│   ├── item 1 (w=1, v=2) → MaxValue(0) = 0
-│   └── item 3 (w=1, v=3) → MaxValue(0) = 0
-└── item 3 (w=1, v=3) → MaxValue(2) = 6
-    ├── item 1 (w=1, v=2) → MaxValue(1) = 3
-    │   ├── item 1 (w=1, v=2) → MaxValue(0) = 0
-    │   └── item 3 (w=1, v=3) → MaxValue(0) = 0
-    ├── item 2 (w=2, v=5) → MaxValue(0) = 0
-    └── item 3 (w=1, v=3) → MaxValue(1) = 3
-        ├── item 1 (w=1, v=2) → MaxValue(0) = 0
-        └── item 3 (w=1, v=3) → MaxValue(0) = 0
-```
+<img width="2725" height="5377" alt="IMG_0357" src="https://github.com/user-attachments/assets/b9f1e5e3-1f9d-426f-8757-a8562ff24208" />
+
 
 At capacity 1, I could only choose item 1 or item 3 because item 2 is too heavy. At capacity 0, the call returns 0. The best choice in this example is three copies of item 3, with total weight 3 and value 9.
 
